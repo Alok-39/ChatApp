@@ -8,7 +8,7 @@ import { connectDB } from "./lib/db.js";
 const app = expres()
 const PORT = process.env.PORT 
 
-
+app.use(expres.json());
 app.use("/api/auth", authRoutes);
 
 app.listen(PORT, () => {
